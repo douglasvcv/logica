@@ -61,11 +61,19 @@ function zero(number){
 
 
   
-  function bla(){
-   let ze = zero([1,2,3])
-    transformRomanNumber(ze)
+  function bla(e){
+    let number = e
+  if(!transformRomanNumber(number)){
+    while(!transformRomanNumber(number)){
+     number-1
+     if(transformRomanNumber(number)){
+      transformRomanNumber(number)
+      number
+     } 
+    }
+  } 
   }
-  bla()
+  
 
 
 const d = [2,3,1]
